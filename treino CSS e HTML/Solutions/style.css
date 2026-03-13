@@ -1,0 +1,97 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS DE COR */
+:root {
+    --bg-dark: #0f0f0f;
+    --bg-light: #1a1a1a;
+    --primary: #000fe1; /* vermelho performance */
+    --text-main: #f5f5f5;
+    --text-muted: #b3b3b3;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(
+        to right,
+        #000000,
+        #1a1a1a
+    );
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary);
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+/* MAIN */
+main {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* SEÇÕES */
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+main h1::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary);
+    display: block;
+    margin-top: 8px;
+}
+
+main p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* BLOCO TRABALHOS */
+main div {
+    background-color: var(--bg-light);
+    padding: 25px;
+    border-left: 4px solid var(--primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    main {
+        margin: 40px auto;
+    }
+}
